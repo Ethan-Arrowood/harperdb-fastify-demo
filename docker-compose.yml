@@ -1,0 +1,18 @@
+version: '2'
+services:
+  harperdb:
+    image: harperdb/hdb:latest
+    environment:
+      - INIT_HDB_USERNAME=HDB_ADMIN
+      - INIT_HDB_PASSWORD=password
+      - INIT_CLUSTER_USER=cluster_user
+      - INIT_CLUSTER_PASSWORD=password
+      - INIT_ENABLE_CLUSTERING=true
+      - INIT_NODE_NAME=docker_node
+      - INIT_CLUSTER_PORT=12345
+    ports:
+      - 9925:9925
+      - 31283:31283
+      - 12345:12345
+    volumes:
+      - ./hdb_data/:/opt/harperdb/hdb/

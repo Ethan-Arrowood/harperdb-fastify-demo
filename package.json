@@ -1,0 +1,18 @@
+{
+  "name": "harperdb-fastify-demo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ethan Arrowood <ethan@arrowood.dev>",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^3.9.2",
+    "fastify-autoload": "^3.4.0",
+    "fastify-plugin": "^3.0.0",
+    "undici": "^3.1.0"
+  }
+}
