@@ -2,15 +2,17 @@ const fastify = require('fastify');
 const autoload = require('fastify-autoload');
 const path = require('path');
 
-const loadRoutes = require('./routes')
-
 async function createServer (server) {
 	server.register(autoload, {
 		dir: path.join(__dirname, 'plugins')
 	});
 
-	server.register(loadRoutes, parent => ({
-		hdb: parent.hdb
+	server.register(autoload, parent => ({
+		dir: path.join(__dirname, 'routes'),
+		options: {
+			prefix: 'api',
+			hdb: parent.hdb
+		}
 	}))
 }
 

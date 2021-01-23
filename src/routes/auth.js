@@ -28,3 +28,4 @@ async function auth (server, options) {
 }
 
 module.exports = auth;
+module.exports.autoPrefix = '/auth';
