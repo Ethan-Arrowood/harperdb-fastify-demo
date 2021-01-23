@@ -10,7 +10,7 @@ async function createServer (server) {
 	});
 
 	server.register(loadRoutes, parent => ({
-		hdbClient: parent.hdbClient
+		hdb: parent.hdb
 	}))
 }
 
@@ -30,9 +30,9 @@ async function run () {
 
 	await app.listen(3000);
 
-	setTimeout(() => {
-		app.close()
-	}, 2000);
+	// setTimeout(() => {
+	// 	app.close()
+	// }, 2000);
 }
 
 run();

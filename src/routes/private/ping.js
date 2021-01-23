@@ -6,8 +6,6 @@ async function ping (server, options) {
 			return 'pong-private\n'
 		}
 	});
-
-	console.log(`hdbClient should exist ${options.hasOwnProperty('hdbClient')}`)
 }
 
 module.exports = ping;

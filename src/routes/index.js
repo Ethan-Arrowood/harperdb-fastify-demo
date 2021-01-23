@@ -6,7 +6,8 @@ async function loadPublicRoutes (server, options) {
 		dir: path.join(__dirname, 'public'),
 		dirNameRoutePrefix: false,
 		options: {
-			prefix: '/api'
+			prefix: '/api',
+			hdb: options.hdb
 		}
 	});
 }
@@ -20,7 +21,7 @@ async function loadPrivateRoutes (server, options) {
 		dirNameRoutePrefix: false,
 		options: {
 			prefix: '/api',
-			hdbClient: options.hdbClient
+			hdb: options.hdb
 		}
 	});
 }
