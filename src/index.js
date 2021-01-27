@@ -18,10 +18,6 @@ async function run () {
   console.log(app.printRoutes())
 
   await app.listen(3000)
-
-  // setTimeout(() => {
-  //   app.close()
-  // }, 2000);
 }
 
 run()

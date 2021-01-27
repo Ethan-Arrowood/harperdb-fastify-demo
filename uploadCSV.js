@@ -2,9 +2,16 @@
 
 const fs = require('fs')
 const { Client } = require('undici')
+
 const client = new Client('http://localhost:9925')
 
-const data = fs.readFileSync('./data/breeds.csv', { encoding: 'utf8' })
+const CSVS = {
+  breeds: './data/breeds.csv',
+  dogs: './data/dog_data.csv',
+  names: './data/dogNames.csv'
+}
+
+const data = fs.readFileSync(CSVS.breeds, { encoding: 'utf8' })
 
 client.request({
   path: '/',
