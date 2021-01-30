@@ -54,3 +54,7 @@ A lot is happening in the custom `request` method. In short, it wraps a call to 
 - [dog_data.csv](https://www.kaggle.com/kingburrito666/largest-dog-breed-data-set?select=2017.csv)
 - [breeds.csv](https://s3.amazonaws.com/complimentarydata/breeds.csv)
 - [dog_names.csv](https://data.world/anchorage/a9a7-y93v)
+
+## Contributing
+
+Since this repo represents an application built during a live event I will **not** be maintaining it like a normal repository. If you'd like to send a PR fixing an out-of-date dependency or addressing a noticeable bug; feel free to do so. I've disabled issues to reduce notification noise, but left discussions on if folks would like to discuss any part of the demo application.
