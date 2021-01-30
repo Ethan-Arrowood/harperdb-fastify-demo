@@ -9,6 +9,10 @@ async function run () {
     process.exit(1)
   })
 
+  if (!process.env.HDB_ORIGIN) {
+    throw Error('Missing env variable HDB_ORIGIN')
+  }
+
   const app = fastify()
 
   await app.register(createServer)

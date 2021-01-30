@@ -4,7 +4,7 @@ const { Pool } = require('undici')
 const fp = require('fastify-plugin')
 
 async function hdbClientPlugin (server) {
-  const pool = new Pool('http://localhost:9925')
+  const pool = new Pool(process.env.HDB_ORIGIN)
   server.decorate('hdb', {
     client: pool,
     request: ({ operation, headers, response }) => pool.stream({
